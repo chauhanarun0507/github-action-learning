@@ -1,0 +1,29 @@
+fisrtname: Arun
+lastname: Chauhan
+age: 30
+email: arun@gm.com
+keyObject:
+    key: value
+    key2: 23
+    keyInnerObject:
+        key1: value
+        key2: 44
+keyNormalArray:
+    - key1
+    - key2
+    -
+        key: value
+keyArrayOfObject:
+    -
+        name: value1
+        name2: value2
+    -
+        name: value2
+        name2: value2
+    -
+        name: value3
+        name2: value2
+longText: |
+    line one
+    line two
+    line three
