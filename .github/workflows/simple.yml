@@ -1,14 +1,22 @@
-name: Shell Commands1
+name: Shell Commands
 
 on: [push]
 
 jobs:
-  abcd:
+  run-shell-command:
     runs-on: ubuntu-latest
     steps:
-      - name: def
+      - name: echo a string
         run: echo "Hello World"
-      - name: ghi script
+      - name: multiline script
         run: |
           node -v
           npm -v
+  run-windows-cmd:
+    runs-on: windows-latest
+    steps:
+      - name: Directory Powershell
+        run: Get-Location
+      - name: DirectoryBash
+        run: pwd
+        shell: bash
