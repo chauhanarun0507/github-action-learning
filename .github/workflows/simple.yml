@@ -1,14 +1,14 @@
-name: Shell Commands
+name: Shell Commands1
 
 on: [push]
 
 jobs:
-  run-shell-command:
+  abcd:
     runs-on: ubuntu-latest
     steps:
-      - name: echo a string
+      - name: def
         run: echo "Hello World"
-      - name: multiline script
+      - name: ghi script
         run: |
           node -v
           npm -v
