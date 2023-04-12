@@ -3,12 +3,24 @@ name: Actions Workflow
 #on: [push, pull_request]
 
 on:
-  repository_dispatch:
-    types: [build] #anything send from postman body event_type
-  schedule:
-    - cron: '0/5 * * * *'
-    - cron: '0/6 * * * *' 
   push:
+    branches:
+      - master
+      - "feature/**" # matches featur/featA, feature/featB, doesn't match feature/feat/a
+      - "!feature/featc"
+    tags: 
+      - v1.*
+    paths: 
+      - "**.js"
+      - "!filename.js"
+    # paths-ignore:
+    # - 'docs/**'
+  #repository_dispatch:
+  #  types: [build] #anything send from postman body event_type
+  #schedule:
+  #  - cron: '0/5 * * * *'
+  #  - cron: '0/6 * * * *' 
+  #push:
   pull_request:
     types: [closed, assigned, opened, reopened]
 
