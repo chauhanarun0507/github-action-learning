@@ -9,13 +9,13 @@ jobs:
       - name: List Files and pwd
         run: |
             pwd
-            ls
+            ls -a
       - name: Git Checkout or clone
         uses: actions/checkout@v3
       - name: List Files and pwd after checkout
         run: |
             pwd
-            ls
+            ls -a
       - name: Simple JS Actions
         id: greet
         uses: actions/hello-world-javascript-action@main
