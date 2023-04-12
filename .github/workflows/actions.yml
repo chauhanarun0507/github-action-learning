@@ -5,10 +5,10 @@ name: Actions Workflow
 on:
   repository_dispatch:
     types: [build] #anything send from postman body event_type
-  #schedule:
-  #  - cron: '0/5 * * * *'
-  #  - cron: '0/6 * * * *' 
-  #push:
+  schedule:
+    - cron: '0/5 * * * *'
+    - cron: '0/6 * * * *' 
+  push:
   pull_request:
     types: [closed, assigned, opened, reopened]
 
